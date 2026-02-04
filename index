@@ -1,0 +1,181 @@
+<?php
+/*
+Template Name: LP Goedkope Aandelen 2026
+*/
+?>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Goedkope Aandelen voor 2026 - Gratis Gids | Value Jagers</title>
+    <meta name="description" content="Download de gratis gids van Value Jagers. Ontdek 3 ondergewaardeerde aandelen met enorm potentieel voor het beursjaar 2026.">
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Diepblauw voor vertrouwen */
+            --accent: #f97316; /* Oranje voor actie/conversie */
+            --text: #333333;
+            --bg-light: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg-light); }
+        
+        /* Layout Utilities */
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .hidden-mobile { display: block; }
+        
+        /* Header */
+        header { background: var(--white); padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Section */
+        .hero { background: var(--primary); color: var(--white); padding: 60px 0 80px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
+        .hero p { font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .highlight-text { color: var(--accent); }
+
+        /* The Offer Grid */
+        .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: -50px; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        /* Left Column: The Hook */
+        .content-col h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+        .feature-box { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid var(--accent); }
+        .feature-box h3 { font-size: 1.1rem; margin-bottom: 5px; font-weight: bold; }
+        .feature-box p { font-size: 0.95rem; color: #555; }
+        
+        /* Right Column: The Form */
+        .form-col { background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; }
+        .form-header { text-align: center; margin-bottom: 20px; }
+        .form-header h3 { font-size: 1.4rem; color: var(--primary); }
+        .arrow-down { font-size: 2rem; color: var(--accent); margin: 10px 0; display: block; }
+
+        /* Form Styling Overrides (Generic for WP forms) */
+        input[type="text"], input[type="email"] { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
+        input[type="submit"], button.submit { width: 100%; padding: 15px; background: var(--accent); color: white; border: none; font-weight: bold; font-size: 1.1rem; cursor: pointer; border-radius: 4px; transition: background 0.3s; }
+        input[type="submit"]:hover { background: #ea580c; }
+        
+        /* Trust Section */
+        .trust-section { padding: 60px 0; background: var(--white); text-align: center; }
+        .trust-stats { display: flex; justify-content: center; gap: 50px; margin-top: 30px; flex-wrap: wrap; }
+        .stat-item { flex: 1; min-width: 200px; }
+        .stat-number { display: block; font-size: 2.5rem; font-weight: bold; color: var(--primary); }
+        .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #777; }
+
+        /* Analysis Teaser */
+        .teaser-section { padding: 60px 0; background: var(--bg-light); }
+        .teaser-card { background: var(--white); padding: 30px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        
+        /* Footer */
+        footer { background: #111; color: #888; padding: 40px 0; font-size: 0.8rem; text-align: center; }
+        footer a { color: #aaa; text-decoration: none; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .offer-grid { grid-template-columns: 1fr; padding: 20px; margin-top: 0; }
+            .hero { padding: 40px 0; }
+            .hero h1 { font-size: 1.8rem; }
+            .trust-stats { gap: 30px; }
+            .hidden-mobile { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Value Jagers</div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>3 Goedkope Aandelen voor een <br><span class="highlight-text">Succesvol Beursjaar 2026</span></h1>
+        <p>Ontdek de beleggingsideeën die het gros van de beleggers mist. Download nu de gratis gids en krijg direct toegang tot onze exclusieve analyse.</p>
+    </div>
+</section>
+
+<div class="container">
+    <div class="offer-grid">
+        <div class="content-col">
+            <h2>Waarom deze gids onmisbaar is</h2>
+            <p style="margin-bottom: 25px;">
+                De financiële geschiedenis herhaalt zich zelden letterlijk, maar ze rijmt wel. Bij Value Jagers focussen we niet op riskante hypes, maar doen we wat al decennia werkt: aandelen kopen voor 80 cent die eigenlijk 1 euro waard zijn. Deze strategie heeft ons de afgelopen 8 jaar al meer dan €900.000 aan winst opgeleverd. In dit exclusieve rapport onthullen we drie specifieke kansen voor 2026.
+            </p>
+
+            <div class="feature-box">
+                <h3>1. De "Onmisbare Partner" in Tech</h3>
+                <p>Een Duits technologiebedrijf dat cruciaal is voor de chipproductie van giganten als ASML. Met een extreem lage waardering (EV/EBITDA van slechts 6,8) en een gloednieuwe fabriek in Dresden is dit aandeel klaar voor een herwaardering.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>2. De Eigenaar van de "Retail-Koning"</h3>
+                <p>Dit fonds bezit de snelst groeiende winkelketen van Europa (Action). Terwijl de winkelstraten leeglopen, blijft dit bedrijf records breken. Het aandeel biedt een perfecte bescherming tegen economische tegenwind.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>3. De "Iconische Turnaround"</h3>
+                <p>Een wereldberoemd merk dat zichzelf opnieuw uitvindt. Door een slimme deal en de inzet van AI transformeert dit bedrijf van een schuldenlast naar een cashflow-machine. De potentie is enorm voor wie nu instapt.</p>
+            </div>
+        </div>
+
+        <div class="form-col">
+            <div class="form-header">
+                <h3>Download Direct (Gratis PDF)</h3>
+                <span class="arrow-down">⬇</span>
+                <p style="font-size: 0.9rem;">Vul uw gegevens in en ontvang het rapport direct in uw mailbox.</p>
+            </div>
+            
+            <?php 
+            // Verwijder de '//' hieronder en vervang de shortcode door die van jouw plugin (Gravity Forms / CF7)
+            // echo do_shortcode('[jouw_form_shortcode_hier]'); 
+            ?>
+
+            <form action="" method="post" style="margin-top:20px;">
+                <input type="text" placeholder="Voornaam" required>
+                <input type="email" placeholder="E-mailadres" required>
+                <button type="submit" class="submit">Stuur mij de Gids Nu &raquo;</button>
+            </form>
+            
+            <p style="font-size: 0.75rem; color: #888; margin-top: 15px; text-align: center;">
+                Wij respecteren uw privacy. Geen spam.
+            </p>
+        </div>
+    </div>
+</div>
+
+<section class="trust-section">
+    <div class="container">
+        <h2 style="font-size: 1.5rem;">Bewezen Resultaten van Value Jagers</h2>
+        <div class="trust-stats">
+            <div class="stat-item">
+                <span class="stat-number">> €900k</span>
+                <span class="stat-label">Gerealiseerde Winst (sinds 2018)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">7,2 op 10</span>
+                <span class="stat-label">Succesvolle Kooptips</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">+105%</span>
+                <span class="stat-label">Gemiddeld Rendement per Rapport</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Copyright &copy; 2026 Value Jagers. Alle rechten voorbehouden.</p>
+        <p style="margin-top: 10px; font-size: 0.7rem; line-height: 1.4; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Disclaimer: Dit artikel is een commerciële uiting en vormt geen beleggingsadvies. Het bevat algemene informatie op basis waarvan u (op eigen verantwoordelijkheid en voor eigen rekening en risico) beslissingen kunt nemen. Rendementen uit het verleden bieden geen garantie voor de toekomst.
+        </p>
+        <br>
+        <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a>
+    </div>
+</footer>
+
+</body>
+</html>
