@@ -1,176 +1,822 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-NL">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 Goedkope Aandelen voor 2026 - Gratis Gids | Value Jagers</title>
-    <meta name="description" content="Download de gratis gids van Value Jagers. Ontdek 3 ondergewaardeerde aandelen met enorm potentieel voor het beursjaar 2026.">
-    <style>
-        :root {
-            --primary: #1e3a8a; /* Diepblauw voor vertrouwen */
-            --accent: #f97316; /* Oranje voor actie/conversie */
-            --text: #333333;
-            --bg-light: #f3f4f6;
-            --white: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout Booster — Beurssignalen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg-light); }
-        
-        /* Layout Utilities */
-        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-        .text-center { text-align: center; }
-        .hidden-mobile { display: block; }
-        
-        /* Header */
-        header { background: var(--white); padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+    :root {
+      --navy: #081C59;
+      --navy-deep: #050F33;
+      --gold: #D4A853;
+      --gold-light: #F2D98D;
+      --gold-dark: #B8882E;
+      --white: #FFFFFF;
+      --off-white: #F4F1EB;
+      --gray-100: #E8E5DF;
+      --gray-400: #9B978F;
+      --gray-600: #6B6760;
+      --green: #2ECC71;
+      --green-dark: #1A9E4F;
+      --red-subtle: #E74C3C;
+    }
 
-        /* Hero Section */
-        .hero { background: var(--primary); color: var(--white); padding: 60px 0 80px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
-        .hero p { font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9; }
-        .highlight-text { color: var(--accent); }
+    html { scroll-behavior: smooth; }
 
-        /* The Offer Grid */
-        .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: -50px; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        
-        /* Left Column: The Hook */
-        .content-col h2 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
-        .feature-box { margin-bottom: 25px; padding-left: 15px; border-left: 4px solid var(--accent); }
-        .feature-box h3 { font-size: 1.1rem; margin-bottom: 5px; font-weight: bold; }
-        .feature-box p { font-size: 0.95rem; color: #555; }
-        
-        /* Right Column: The Form */
-        .form-col { background: #f9fafb; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; }
-        .form-header { text-align: center; margin-bottom: 20px; }
-        .form-header h3 { font-size: 1.4rem; color: var(--primary); }
-        .arrow-down { font-size: 2rem; color: var(--accent); margin: 10px 0; display: block; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--off-white);
+      background: var(--navy-deep);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* Form Styling Overrides (Generic for WP forms) */
-        input[type="text"], input[type="email"] { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; }
-        input[type="submit"], button.submit { width: 100%; padding: 15px; background: var(--accent); color: white; border: none; font-weight: bold; font-size: 1.1rem; cursor: pointer; border-radius: 4px; transition: background 0.3s; }
-        input[type="submit"]:hover { background: #ea580c; }
-        
-        /* Trust Section */
-        .trust-section { padding: 60px 0; background: var(--white); text-align: center; }
-        .trust-stats { display: flex; justify-content: center; gap: 50px; margin-top: 30px; flex-wrap: wrap; }
-        .stat-item { flex: 1; min-width: 200px; }
-        .stat-number { display: block; font-size: 2.5rem; font-weight: bold; color: var(--primary); }
-        .stat-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #777; }
+    /* ── HERO SECTION ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 40px 20px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,168,83,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 100%, rgba(8,28,89,0.6) 0%, transparent 50%),
+        var(--navy-deep);
+    }
 
-        /* Analysis Teaser */
-        .teaser-section { padding: 60px 0; background: var(--bg-light); }
-        .teaser-card { background: var(--white); padding: 30px; margin-bottom: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        
-        /* Footer */
-        footer { background: #111; color: #888; padding: 40px 0; font-size: 0.8rem; text-align: center; }
-        footer a { color: #aaa; text-decoration: none; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 60px,
+          rgba(212,168,83,0.03) 60px,
+          rgba(212,168,83,0.03) 61px
+        );
+      pointer-events: none;
+    }
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .offer-grid { grid-template-columns: 1fr; padding: 20px; margin-top: 0; }
-            .hero { padding: 40px 0; }
-            .hero h1 { font-size: 1.8rem; }
-            .trust-stats { gap: 30px; }
-            .hidden-mobile { display: none; }
-        }
-    </style>
+    /* Animated subtle grid lines */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 120px,
+          rgba(212,168,83,0.02) 120px,
+          rgba(212,168,83,0.02) 121px
+        );
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── LEFT COLUMN: COPY ── */
+    .hero-copy { animation: fadeInUp 0.8s ease-out; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,168,83,0.1);
+      border: 1px solid rgba(212,168,83,0.25);
+      border-radius: 100px;
+      padding: 6px 16px 6px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.03em;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .hero-headline {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 4.2vw, 52px);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-headline .gold {
+      color: var(--gold);
+      position: relative;
+    }
+
+    .hero-headline .gold::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: 0.4;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-400);
+      margin-bottom: 36px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    .hero-sub strong { color: var(--off-white); font-weight: 600; }
+
+    /* ── BENEFITS LIST ── */
+    .benefits { list-style: none; margin-bottom: 40px; }
+
+    .benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      font-size: 15.5px;
+      color: var(--off-white);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      opacity: 0;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .benefits li:nth-child(1) { animation-delay: 0.3s; }
+    .benefits li:nth-child(2) { animation-delay: 0.45s; }
+    .benefits li:nth-child(3) { animation-delay: 0.6s; }
+    .benefits li:nth-child(4) { animation-delay: 0.75s; }
+
+    .benefits li:last-child { border-bottom: none; }
+
+    .benefit-icon {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      background: rgba(46,204,113,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .benefit-icon svg { width: 12px; height: 12px; }
+
+    .benefits li strong { color: var(--gold-light); font-weight: 600; }
+
+    /* ── SOCIAL PROOF BAR ── */
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      opacity: 0;
+      animation: fadeInUp 0.6s ease-out 0.9s forwards;
+    }
+
+    .avatars {
+      display: flex;
+      margin-right: -4px;
+    }
+
+    .avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--navy-deep);
+      margin-right: -10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--navy-deep);
+    }
+
+    .avatar:nth-child(1) { background: var(--gold-light); z-index: 4; }
+    .avatar:nth-child(2) { background: #8EC5FC; z-index: 3; }
+    .avatar:nth-child(3) { background: #A8E6CF; z-index: 2; }
+    .avatar:nth-child(4) { background: #FFD3B6; z-index: 1; }
+
+    .social-proof-text {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.5;
+    }
+
+    .social-proof-text strong {
+      color: var(--off-white);
+      font-weight: 600;
+    }
+
+    /* ── RIGHT COLUMN: CARD ── */
+    .cta-card {
+      background: linear-gradient(170deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 36px 32px;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+    }
+
+    /* Mock PDF visual */
+    .pdf-mock {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background:
+        linear-gradient(135deg, #0D2466 0%, #0A1A4A 100%);
+      border-radius: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(212,168,83,0.15);
+    }
+
+    .pdf-mock::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 21px),
+        repeating-linear-gradient(90deg, transparent, transparent 20px, rgba(255,255,255,0.02) 20px, rgba(255,255,255,0.02) 21px);
+    }
+
+    .pdf-inner {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pdf-icon {
+      width: 48px; height: 48px;
+      margin: 0 auto 12px;
+      background: rgba(212,168,83,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pdf-icon svg { width: 24px; height: 24px; }
+
+    .pdf-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .pdf-subtitle {
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+
+    /* Chart animation in PDF mock */
+    .chart-line {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      height: 60px;
+    }
+
+    .chart-line svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-path {
+      stroke: var(--gold);
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: drawLine 2s ease-out 1s forwards;
+    }
+
+    .chart-area {
+      fill: url(#goldGradient);
+      opacity: 0;
+      animation: fadeIn 1s ease-out 2.5s forwards;
+    }
+
+    /* ── FORM ── */
+    .card-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .card-heading {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px 14px 46px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .form-input::placeholder { color: var(--gray-600); }
+
+    .form-input:focus {
+      border-color: var(--gold);
+      background: rgba(212,168,83,0.05);
+      box-shadow: 0 0 0 3px rgba(212,168,83,0.1);
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray-600);
+      pointer-events: none;
+    }
+
+    .input-icon svg { width: 18px; height: 18px; }
+
+    .cta-button {
+      width: 100%;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+      background-size: 200% 100%;
+      color: var(--navy-deep);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button:hover {
+      background-position: 100% 0;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(212,168,83,0.25);
+    }
+
+    .cta-button:active { transform: translateY(0); }
+
+    .cta-button svg { width: 18px; height: 18px; }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 40%,
+        rgba(255,255,255,0.15) 50%,
+        transparent 60%
+      );
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    .form-disclaimer {
+      font-size: 12px;
+      color: var(--gray-600);
+      margin-top: 14px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .form-disclaimer a {
+      color: var(--gray-400);
+      text-decoration: underline;
+      text-decoration-color: rgba(155,151,143,0.3);
+      text-underline-offset: 2px;
+    }
+
+    .form-disclaimer a:hover { color: var(--gold-light); }
+
+    .lock-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--gray-600);
+      margin-top: 12px;
+    }
+
+    .lock-line svg { width: 12px; height: 12px; opacity: 0.6; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 28px;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: '"';
+      font-family: 'DM Serif Display', serif;
+      font-size: 64px;
+      color: var(--gold);
+      opacity: 0.15;
+      position: absolute;
+      top: 8px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: var(--gray-400);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-style: italic;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--navy-deep);
+    }
+
+    .testimonial:nth-child(1) .author-avatar { background: var(--gold-light); }
+    .testimonial:nth-child(2) .author-avatar { background: #8EC5FC; }
+
+    .author-info { font-size: 14px; }
+    .author-name { color: var(--off-white); font-weight: 600; }
+    .author-role { color: var(--gray-600); font-size: 13px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    .trust-icon {
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-icon svg { width: 16px; height: 16px; color: var(--gold); }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 24px 20px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    .footer a { color: var(--gray-400); text-decoration: none; }
+    .footer a:hover { color: var(--gold-light); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      30%, 100% { transform: translateX(100%) rotate(45deg); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 520px;
+      }
+
+      .hero-copy { text-align: center; }
+      .hero-sub { margin-left: auto; margin-right: auto; }
+      .benefits li { justify-content: flex-start; text-align: left; }
+      .social-proof { justify-content: center; }
+      .testimonials { grid-template-columns: 1fr; max-width: 520px; }
+
+      .badge { margin-left: auto; margin-right: auto; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 30px 16px; }
+      .cta-card { padding: 28px 22px; }
+      .trust-bar { gap: 24px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">Value Jagers</div>
-    </div>
-</header>
+  <!-- ════════ HERO ════════ -->
+  <section class="hero">
+    <div class="hero-inner">
 
-<section class="hero">
-    <div class="container">
-        <h1>3 Goedkope Aandelen voor een <br><span class="highlight-text">Succesvol Beursjaar 2026</span></h1>
-        <p>Ontdek de beleggingsideeën die het gros van de beleggers mist. Download nu de gratis gids en krijg direct toegang tot onze exclusieve analyse.</p>
-    </div>
-</section>
-
-<div class="container">
-    <div class="offer-grid">
-        <div class="content-col">
-            <h2>Waarom deze gids onmisbaar is</h2>
-            <p style="margin-bottom: 25px;">
-                De financiële geschiedenis herhaalt zich zelden letterlijk, maar ze rijmt wel. Bij Value Jagers focussen we niet op riskante hypes, maar doen we wat al decennia werkt: aandelen kopen voor 80 cent die eigenlijk 1 euro waard zijn. Deze strategie heeft ons de afgelopen 8 jaar al meer dan €900.000 aan winst opgeleverd. In dit exclusieve rapport onthullen we drie specifieke kansen voor 2026.
-            </p>
-
-            <div class="feature-box">
-                <h3>1. De "Onmisbare Partner" in Tech</h3>
-                <p>Een Duits technologiebedrijf dat cruciaal is voor de chipproductie van giganten als ASML. Met een extreem lage waardering (EV/EBITDA van slechts 6,8) en een gloednieuwe fabriek in Dresden is dit aandeel klaar voor een herwaardering.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>2. De Eigenaar van de "Retail-Koning"</h3>
-                <p>Dit fonds bezit de snelst groeiende winkelketen van Europa (Action). Terwijl de winkelstraten leeglopen, blijft dit bedrijf records breken. Het aandeel biedt een perfecte bescherming tegen economische tegenwind.</p>
-            </div>
-
-            <div class="feature-box">
-                <h3>3. De "Iconische Turnaround"</h3>
-                <p>Een wereldberoemd merk dat zichzelf opnieuw uitvindt. Door een slimme deal en de inzet van AI transformeert dit bedrijf van een schuldenlast naar een cashflow-machine. De potentie is enorm voor wie nu instapt.</p>
-            </div>
+      <!-- LEFT: COPY -->
+      <div class="hero-copy">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Gratis download — Direct in je inbox
         </div>
 
-        <div class="form-col">
-            <div class="form-header">
-                <h3>Download Direct (Gratis PDF)</h3>
-                <span class="arrow-down">⬇</span>
-                <p style="font-size: 0.9rem;">Vul uw gegevens in en ontvang het rapport direct in uw mailbox.</p>
-            </div>
-            
-            <?php 
-            // Verwijder de '//' hieronder en vervang de shortcode door die van jouw plugin (Gravity Forms / CF7)
-            // echo do_shortcode('[jouw_form_shortcode_hier]'); 
-            ?>
+        <h1 class="hero-headline">
+          Zie exact wanneer <span class="gold">institutionele partijen</span> kopen — vóórdat de koers beweegt
+        </h1>
 
-            <form action="" method="post" style="margin-top:20px;">
-                <input type="text" placeholder="Voornaam" required>
-                <input type="email" placeholder="E-mailadres" required>
-                <button type="submit" class="submit">Stuur mij de Gids Nu &raquo;</button>
-            </form>
-            
-            <p style="font-size: 0.75rem; color: #888; margin-top: 15px; text-align: center;">
-                Wij respecteren uw privacy. Geen spam.
-            </p>
-        </div>
-    </div>
-</div>
-
-<section class="trust-section">
-    <div class="container">
-        <h2 style="font-size: 1.5rem;">Bewezen Resultaten van Value Jagers</h2>
-        <div class="trust-stats">
-            <div class="stat-item">
-                <span class="stat-number">> €900k</span>
-                <span class="stat-label">Gerealiseerde Winst (sinds 2018)</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">7,2 op 10</span>
-                <span class="stat-label">Succesvolle Kooptips</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">+105%</span>
-                <span class="stat-label">Gemiddeld Rendement per Rapport</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <p>Copyright &copy; 2026 Value Jagers. Alle rechten voorbehouden.</p>
-        <p style="margin-top: 10px; font-size: 0.7rem; line-height: 1.4; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Disclaimer: Dit artikel is een commerciële uiting en vormt geen beleggingsadvies. Het bevat algemene informatie op basis waarvan u (op eigen verantwoordelijkheid en voor eigen rekening en risico) beslissingen kunt nemen. Rendementen uit het verleden bieden geen garantie voor de toekomst.
+        <p class="hero-sub">
+          Ontdek hoe <strong>VWAP, Overhead Supply en Volumebalken</strong> je vertellen wat hedgefondsen en trading desks doen. Stop met gokken — handel met de data van het slimme geld.
         </p>
-        <br>
-        <a href="#">Privacybeleid</a> | <a href="#">Algemene Voorwaarden</a>
+
+        <ul class="benefits">
+          <li>
+            <span class="benefit-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#2ECC71" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <span>Waarom <strong>kopen op een uitbraak je geld kost</strong> als je deze ene indicator negeert</span>
+          </li>
+          <li>
+            <span class="benefit-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#2ECC71" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <span>Hoe je direct ziet of <strong>grote fondsen aan het kopen of verkopen zijn</strong></span>
+          </li>
+          <li>
+            <span class="benefit-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#2ECC71" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <span>Unieke formule om <strong>bodems en toppen</strong> met grote precisie te voorspellen</span>
+          </li>
+          <li>
+            <span class="benefit-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#2ECC71" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </span>
+            <span>Praktische regels die je <strong>vandaag nog kunt toepassen</strong> op elke markt</span>
+          </li>
+        </ul>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div class="avatar">GD</div>
+            <div class="avatar">SJ</div>
+            <div class="avatar">MR</div>
+            <div class="avatar">KV</div>
+          </div>
+          <div class="social-proof-text">
+            <strong>2.400+ beleggers</strong> gingen je voor.<br>
+            Sluit je aan bij de community.
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: CTA CARD -->
+      <div class="cta-card">
+        <div class="pdf-mock">
+          <div class="chart-line">
+            <svg viewBox="0 0 300 60" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="goldGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(212,168,83,0.2)"/>
+                  <stop offset="100%" stop-color="rgba(212,168,83,0)"/>
+                </linearGradient>
+              </defs>
+              <path class="chart-area" d="M0,55 L30,48 L60,50 L90,42 L120,45 L150,30 L180,35 L210,20 L240,15 L270,18 L300,5 L300,60 L0,60Z"/>
+              <path class="chart-path" d="M0,55 L30,48 L60,50 L90,42 L120,45 L150,30 L180,35 L210,20 L240,15 L270,18 L300,5"/>
+            </svg>
+          </div>
+          <div class="pdf-inner">
+            <div class="pdf-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="var(--gold)" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+              </svg>
+            </div>
+            <div class="pdf-title">Breakout Booster</div>
+            <div class="pdf-subtitle">Beurssignalen — Gratis gids (PDF)</div>
+          </div>
+        </div>
+
+        <div class="card-label">Gratis download</div>
+        <h2 class="card-heading">Ontvang de Breakout Booster direct in je inbox</h2>
+
+        <form id="squeeze-form" autocomplete="off">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                </svg>
+              </span>
+              <input type="email" class="form-input" placeholder="Jouw e-mailadres" required>
+            </div>
+          </div>
+
+          <button type="submit" class="cta-button">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/>
+            </svg>
+            Ja, stuur mij de gratis gids
+          </button>
+        </form>
+
+        <div class="lock-line">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+          </svg>
+          100% gratis · Geen spam · Direct opzegbaar
+        </div>
+
+        <p class="form-disclaimer">
+          Door te klikken ga je akkoord met onze <a href="/algemene-voorwaarden">Gebruikersvoorwaarden</a> en <a href="/privacy-cookies">Privacy Policy</a>
+        </p>
+      </div>
     </div>
-</footer>
+  </section>
+
+  <!-- ════════ TESTIMONIALS ════════ -->
+  <section class="testimonials">
+    <div class="testimonial">
+      <p class="testimonial-text">
+        Eindelijk snap ik waarom mijn stops steeds geraakt werden. Deze methode geeft me de rust van een professional. Ik handel nu met vertrouwen in plaats van angst.
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar">GD</div>
+        <div class="author-info">
+          <div class="author-name">Gustaaf De Donder</div>
+          <div class="author-role">Actief belegger</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial-text">
+        Ik had wel eens van VWAP gehoord, maar wist nooit hoe ik het moest toepassen. Deze gids maakt het eindelijk praktisch. Geen vaag gedoe, maar heldere regels.
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SJ</div>
+        <div class="author-info">
+          <div class="author-name">Sander de J.</div>
+          <div class="author-role">Swing Trader</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ TRUST BAR ════════ -->
+  <div class="trust-bar">
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+        </svg>
+      </div>
+      Gebaseerd op professionele methoden
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+        </svg>
+      </div>
+      Gebruikt door hedgefondsen &amp; trading desks
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      Direct toepasbaar op elke markt
+    </div>
+  </div>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer">
+    &copy; 2026 Beurssignalen · <a href="/algemene-voorwaarden">Voorwaarden</a> · <a href="/privacy-cookies">Privacy</a>
+  </footer>
 
 </body>
 </html>
