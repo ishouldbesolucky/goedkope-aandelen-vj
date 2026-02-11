@@ -49,6 +49,19 @@
   .container { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
   .gold { color: var(--gold); }
 
+  /* ─── RISK BANNER ─── */
+  .risk-banner {
+    background: rgba(239,68,68,0.06);
+    border-bottom: 1px solid rgba(239,68,68,0.12);
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 0.7rem;
+    color: rgba(239,68,68,0.8);
+    line-height: 1.5;
+    position: relative; z-index: 10;
+  }
+  .risk-banner strong { font-weight: 700; }
+
   /* ─── TOPBAR ─── */
   .topbar {
     padding: 14px 0;
@@ -87,10 +100,10 @@
     max-width: 740px; margin: 0 auto 8px;
     animation: fadeUp 0.7s ease both;
   }
-  .hero h1 em {
-    font-style: italic; color: var(--gold); position: relative;
+  .hero h1 .gold {
+    color: var(--gold); position: relative;
   }
-  .hero h1 em::after {
+  .hero h1 .gold::after {
     content: ''; position: absolute; left: 0; bottom: 2px;
     width: 100%; height: 3px;
     background: var(--gold); opacity: 0.3; border-radius: 2px;
@@ -386,6 +399,7 @@
   /* ─── RESPONSIVE: MOBILE ─── */
   @media (max-width: 640px) {
     .container { padding: 0 18px; }
+    .risk-banner { font-size: 0.65rem; padding: 8px 18px; }
     .topbar-meta .company-name { display: none; }
 
     .hero { padding: 40px 0 0; }
@@ -466,7 +480,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero-kicker">Historische AI-setups toonden een gemiddelde stijging van 47%</div>
-    <h1>Ontdek onze 3 nieuwe AI-setups voor de beurs</h1>
+    <h1>Ontdek onze <span class="gold">3 nieuwe AI-setups</span> voor de beurs</h1>
     <p class="hero-sub">Ons AI-model analyseert duizenden datapunten en detecteert opkomende trends die de meeste beleggers nog niet op de radar hebben.</p>
 
     <!-- STATS -->
