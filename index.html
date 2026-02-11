@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3 Geheime AI Kooptips — Ontdek de Trends van Morgen</title>
+<title>3 AI Kooptips — Gratis Rapport</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --gold: #C9A227;
-    --gold-light: #E8D48B;
     --gold-dim: rgba(201,162,39,0.15);
     --dark: #0A0C10;
     --dark-card: #10131A;
@@ -18,7 +17,6 @@
     --text-dim: #9CA3AF;
     --green: #22C55E;
     --red: #EF4444;
-    --accent-blue: #3B82F6;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,407 +28,307 @@
     color: var(--text);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
   }
 
-  /* ─── ANIMATED BACKGROUND ─── */
+  /* ─── BG ─── */
   .bg-grid {
     position: fixed; inset: 0; z-index: 0; pointer-events: none;
     background-image:
-      linear-gradient(rgba(201,162,39,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(201,162,39,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(201,162,39,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,162,39,0.025) 1px, transparent 1px);
     background-size: 60px 60px;
   }
   .bg-glow {
     position: fixed; border-radius: 50%;
-    filter: blur(180px); pointer-events: none; z-index: 0;
+    filter: blur(160px); pointer-events: none; z-index: 0;
   }
-  .bg-glow--1 { width: 600px; height: 600px; top: -200px; left: -100px; background: var(--gold); opacity: 0.12; }
-  .bg-glow--2 { width: 600px; height: 600px; bottom: -300px; right: -200px; background: var(--accent-blue); opacity: 0.07; }
+  .bg-glow--1 { width: 500px; height: 500px; top: -150px; left: 50%; transform: translateX(-50%); background: var(--gold); opacity: 0.1; }
 
-  /* ─── UTILITY ─── */
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-  .gold { color: var(--gold); }
+  .page { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 24px; }
 
   /* ─── TOPBAR ─── */
   .topbar {
-    padding: 14px 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
     border-bottom: 1px solid rgba(201,162,39,0.1);
-    position: relative; z-index: 10;
   }
-  .topbar .container { display: flex; align-items: center; justify-content: space-between; }
   .topbar-logo {
     font-family: 'Playfair Display', serif;
-    font-weight: 900; font-size: 1.25rem;
-    letter-spacing: -0.5px; color: var(--gold);
+    font-weight: 900; font-size: 1.15rem;
+    color: var(--gold);
   }
+  .topbar-logo span { color: var(--text); }
   .topbar-live {
-    display: flex; align-items: center; gap: 8px;
-    font-size: 0.8rem; color: var(--text-dim);
+    display: flex; align-items: center; gap: 7px;
+    font-size: 0.75rem; color: var(--text-dim);
   }
-  .topbar-live .dot {
-    width: 7px; height: 7px; border-radius: 50%;
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
     background: var(--green); animation: pulse 2s infinite;
   }
   @keyframes pulse {
-    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
-    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+    50% { box-shadow: 0 0 0 5px rgba(34,197,94,0); }
   }
 
   /* ─── HERO ─── */
-  .hero { padding: 80px 0 60px; text-align: center; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--gold-dim);
-    border: 1px solid rgba(201,162,39,0.25);
-    border-radius: 100px; padding: 8px 20px;
-    font-size: 0.82rem; font-weight: 600; color: var(--gold);
-    margin-bottom: 32px;
-    animation: fadeUp 0.8s ease both;
+  .hero {
+    padding: 48px 0 0;
+    text-align: center;
   }
-  .hero-badge svg { flex-shrink: 0; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.25);
+    border-radius: 100px; padding: 6px 16px;
+    font-size: 0.75rem; font-weight: 600; color: var(--red);
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero-badge .urgency-dot {
+    width: 6px; height: 6px; background: var(--red);
+    border-radius: 50%; animation: pulse-red 1.5s infinite;
+  }
+  @keyframes pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+    50% { box-shadow: 0 0 0 5px rgba(239,68,68,0); }
+  }
 
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    font-size: clamp(2rem, 6vw, 3.2rem);
     font-weight: 900; line-height: 1.1;
     letter-spacing: -1.5px;
-    max-width: 780px; margin: 0 auto 24px;
-    animation: fadeUp 0.8s 0.15s ease both;
+    margin-bottom: 16px;
+    animation: fadeUp 0.6s 0.1s ease both;
   }
-  .hero h1 em {
-    font-style: italic; color: var(--gold); position: relative;
+  .hero h1 .gold {
+    color: var(--gold); position: relative;
   }
-  .hero h1 em::after {
-    content: ''; position: absolute; left: 0; bottom: 4px;
+  .hero h1 .gold::after {
+    content: ''; position: absolute; left: 0; bottom: 2px;
     width: 100%; height: 3px;
     background: var(--gold); opacity: 0.3; border-radius: 2px;
   }
   .hero-sub {
-    font-size: 1.15rem; line-height: 1.7; color: var(--text-dim);
-    max-width: 600px; margin: 0 auto 40px;
-    animation: fadeUp 0.8s 0.3s ease both;
+    font-size: 1.05rem; line-height: 1.6; color: var(--text-dim);
+    max-width: 520px; margin: 0 auto 10px;
+    animation: fadeUp 0.6s 0.2s ease both;
   }
 
-  /* ─── FORM ─── */
-  .cta-form {
-    display: flex; max-width: 520px; margin: 0 auto;
-    animation: fadeUp 0.8s 0.45s ease both;
+  /* ─── RESULT BAR ─── */
+  .result-bar {
+    display: flex; justify-content: center; gap: 32px;
+    padding: 20px 0 32px;
+    animation: fadeUp 0.6s 0.3s ease both;
   }
-  .cta-form input {
-    flex: 1; min-width: 0;
-    padding: 16px 20px;
-    border: 1px solid rgba(201,162,39,0.2);
-    border-right: none; border-radius: 8px 0 0 8px;
+  .result-item { text-align: center; }
+  .result-item .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem; font-weight: 600; color: var(--gold);
+    line-height: 1;
+  }
+  .result-item .label {
+    font-size: 0.68rem; color: var(--text-dim);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  /* ─── FORM CARD ─── */
+  .form-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(201,162,39,0.12);
+    border-radius: 16px;
+    padding: 32px 28px;
+    animation: fadeUp 0.6s 0.35s ease both;
+  }
+  .form-card h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem; font-weight: 700;
+    text-align: center; margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .form-card h2 svg { vertical-align: -2px; margin-right: 4px; }
+
+  .form-fields { display: flex; flex-direction: column; gap: 10px; }
+  .form-fields input {
+    width: 100%; padding: 16px 18px;
+    border: 1px solid rgba(201,162,39,0.15);
+    border-radius: 10px;
     background: var(--dark-surface); color: var(--text);
     font-size: 1rem; font-family: 'DM Sans', sans-serif;
     outline: none; transition: border-color 0.3s;
+    text-align: center;
   }
-  .cta-form input::placeholder { color: var(--text-dim); }
-  .cta-form input:focus { border-color: var(--gold); }
-  .cta-form button {
-    padding: 16px 28px;
+  .form-fields input::placeholder { color: var(--text-dim); }
+  .form-fields input:focus { border-color: var(--gold); }
+
+  .form-fields button {
+    width: 100%; padding: 17px;
     background: linear-gradient(135deg, var(--gold), #D4A821);
     color: var(--dark); font-family: 'DM Sans', sans-serif;
-    font-weight: 700; font-size: 0.95rem;
-    border: none; border-radius: 0 8px 8px 0;
-    cursor: pointer; white-space: nowrap;
+    font-weight: 700; font-size: 1.05rem;
+    border: none; border-radius: 10px;
+    cursor: pointer;
     transition: transform 0.2s, box-shadow 0.3s;
+    letter-spacing: -0.2px;
   }
-  .cta-form button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 30px rgba(201,162,39,0.3);
+  .form-fields button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 35px rgba(201,162,39,0.35);
   }
-  .cta-note {
-    text-align: center; font-size: 0.78rem; color: var(--text-dim);
-    margin-top: 14px;
-    animation: fadeUp 0.8s 0.55s ease both;
+  .form-fields button:active { transform: translateY(0); }
+
+  .form-note {
+    text-align: center; font-size: 0.73rem; color: var(--text-dim);
+    margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 16px;
   }
-  .cta-note svg { vertical-align: -2px; margin-right: 4px; }
+  .form-note span { display: flex; align-items: center; gap: 4px; }
+  .form-note svg { flex-shrink: 0; }
 
   /* ─── SUCCESS ─── */
   .success-msg {
-    display: none; text-align: center;
-    max-width: 520px; margin: 0 auto; padding: 28px;
+    display: none; text-align: center; padding: 28px;
     border-radius: 12px;
     background: rgba(34,197,94,0.08);
     border: 1px solid rgba(34,197,94,0.2);
     animation: fadeUp 0.5s ease;
   }
-  .success-msg h3 { color: var(--green); font-size: 1.15rem; margin-bottom: 8px; }
-  .success-msg p { color: var(--text-dim); font-size: 0.9rem; }
+  .success-msg h3 { color: var(--green); font-size: 1.1rem; margin-bottom: 6px; }
+  .success-msg p { color: var(--text-dim); font-size: 0.88rem; }
 
-  /* ─── TICKER ─── */
-  .ticker-wrap {
-    overflow: hidden;
-    border-top: 1px solid rgba(201,162,39,0.08);
-    border-bottom: 1px solid rgba(201,162,39,0.08);
-    padding: 14px 0; margin-bottom: 60px;
+  /* ─── PREVIEW STRIP ─── */
+  .preview-strip {
+    display: flex; gap: 10px;
+    padding: 28px 0 0;
+    animation: fadeUp 0.6s 0.45s ease both;
   }
-  .ticker {
-    display: flex; gap: 48px;
-    animation: scroll 35s linear infinite;
-    width: max-content;
-  }
-  .ticker-item {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 0.85rem; white-space: nowrap;
-  }
-  .ticker-item .name { color: var(--text-dim); font-weight: 500; }
-  .ticker-item .val { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
-  .ticker-item .up { color: var(--green); }
-  .ticker-item .down { color: var(--red); }
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  /* ─── TIPS SECTION ─── */
-  .tips-section { padding: 40px 0 80px; }
-  .section-label {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 0.78rem; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 2px;
-    color: var(--gold); margin-bottom: 16px;
-  }
-  .section-label::after {
-    content: ''; flex: 1; height: 1px;
-    background: linear-gradient(90deg, rgba(201,162,39,0.3), transparent);
-  }
-  .tips-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-    font-weight: 900; letter-spacing: -1px; margin-bottom: 48px;
-  }
-  .tip-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-
-  .tip-card {
+  .preview-chip {
+    flex: 1;
     background: var(--dark-card);
     border: 1px solid rgba(201,162,39,0.08);
-    border-radius: 16px; padding: 32px 28px;
-    position: relative; overflow: hidden;
-    transition: border-color 0.4s, transform 0.3s;
-  }
-  .tip-card:hover {
-    border-color: rgba(201,162,39,0.25);
-    transform: translateY(-4px);
-  }
-  .tip-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    opacity: 0; transition: opacity 0.4s;
-  }
-  .tip-card:hover::before { opacity: 1; }
-  .tip-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem; font-weight: 900;
-    color: rgba(201,162,39,0.08); line-height: 1; margin-bottom: 16px;
-  }
-  .tip-icon {
-    width: 48px; height: 48px; border-radius: 12px;
-    background: var(--gold-dim);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 20px;
-  }
-  .tip-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; line-height: 1.35; }
-  .tip-card p { font-size: 0.9rem; line-height: 1.65; color: var(--text-dim); margin-bottom: 20px; }
-  .tip-locked {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 0.8rem; font-weight: 600; color: var(--gold);
-    cursor: pointer; transition: gap 0.2s;
-  }
-  .tip-locked:hover { gap: 10px; }
-
-  /* ─── AI CHART VISUAL ─── */
-  .ai-visual { padding: 60px 0 80px; }
-  .ai-card {
-    background: var(--dark-card);
-    border: 1px solid rgba(201,162,39,0.08);
-    border-radius: 20px; padding: 48px;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 48px; align-items: center;
-  }
-  .ai-card-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    font-weight: 900; letter-spacing: -0.5px;
-    margin-bottom: 20px; line-height: 1.2;
-  }
-  .ai-card-text p {
-    font-size: 0.95rem; line-height: 1.7;
-    color: var(--text-dim); margin-bottom: 24px;
-  }
-  .ai-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-  .ai-stat {
-    text-align: center; padding: 16px 8px; border-radius: 10px;
-    background: rgba(201,162,39,0.05);
-    border: 1px solid rgba(201,162,39,0.08);
-  }
-  .ai-stat .num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.6rem; font-weight: 700; color: var(--gold);
-  }
-  .ai-stat .label {
-    font-size: 0.72rem; color: var(--text-dim); margin-top: 4px;
-    text-transform: uppercase; letter-spacing: 0.5px;
-  }
-  .ai-chart {
-    position: relative; height: 280px;
-    background: linear-gradient(180deg, transparent 0%, rgba(201,162,39,0.03) 100%);
     border-radius: 12px;
-    border: 1px solid rgba(201,162,39,0.08);
+    padding: 18px 14px;
+    text-align: center;
+    position: relative;
     overflow: hidden;
   }
-  .ai-chart svg { width: 100%; height: 100%; }
+  .preview-chip::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--gold); opacity: 0.4;
+  }
+  .preview-chip .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 900;
+    color: rgba(201,162,39,0.12); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .preview-chip .title {
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--text); line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .preview-chip .lock {
+    font-size: 0.68rem; color: var(--gold);
+    display: flex; align-items: center; justify-content: center; gap: 4px;
+  }
 
   /* ─── SOCIAL PROOF ─── */
-  .social-proof { padding: 0 0 80px; }
-  .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .proof-card {
+  .social-strip {
+    padding: 28px 0 0;
+    animation: fadeUp 0.6s 0.55s ease both;
+  }
+  .testimonial {
     background: var(--dark-card);
     border: 1px solid rgba(201,162,39,0.06);
-    border-radius: 14px; padding: 28px;
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex; gap: 16px; align-items: flex-start;
   }
-  .proof-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 14px; letter-spacing: 2px; }
-  .proof-card blockquote {
-    font-size: 0.9rem; line-height: 1.7; color: var(--text-dim);
-    font-style: italic; margin-bottom: 16px;
-  }
-  .proof-author { font-size: 0.82rem; font-weight: 600; color: var(--text); }
-  .proof-role { font-size: 0.75rem; color: var(--text-dim); }
-
-  /* ─── BOTTOM CTA ─── */
-  .bottom-cta { padding: 80px 0; text-align: center; position: relative; }
-  .bottom-cta::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at center, rgba(201,162,39,0.06), transparent 70%);
-    pointer-events: none;
-  }
-  .bottom-cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 900; letter-spacing: -1px; margin-bottom: 16px;
-  }
-  .bottom-cta p {
-    font-size: 1rem; color: var(--text-dim);
-    max-width: 500px; margin: 0 auto 32px; line-height: 1.6;
-  }
-
-  /* ─── URGENCY BAR ─── */
-  .urgency {
+  .testimonial-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, rgba(201,162,39,0.2), rgba(201,162,39,0.05));
     display: flex; align-items: center; justify-content: center;
-    gap: 10px; font-size: 0.85rem; color: var(--gold);
-    font-weight: 600; margin-bottom: 28px;
+    flex-shrink: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900; font-size: 1rem; color: var(--gold);
   }
-  .urgency-dot {
-    width: 8px; height: 8px; background: var(--red);
-    border-radius: 50%; animation: pulse 1.5s infinite;
+  .testimonial-content { flex: 1; }
+  .testimonial-stars {
+    color: var(--gold); font-size: 0.75rem;
+    letter-spacing: 1px; margin-bottom: 6px;
   }
-  .countdown {
-    font-family: 'JetBrains Mono', monospace;
-    background: var(--dark-surface); padding: 4px 10px;
-    border-radius: 6px; border: 1px solid rgba(201,162,39,0.15);
+  .testimonial-content blockquote {
+    font-size: 0.88rem; line-height: 1.6;
+    color: var(--text-dim); font-style: italic;
+    margin-bottom: 8px;
+  }
+  .testimonial-author {
+    font-size: 0.78rem; font-weight: 600; color: var(--text);
+  }
+  .testimonial-role {
+    font-size: 0.7rem; color: var(--text-dim);
   }
 
-  /* ─── FOOTER ─── */
-  footer {
-    border-top: 1px solid rgba(201,162,39,0.08);
-    padding: 28px 0; text-align: center;
-    font-size: 0.75rem; color: var(--text-dim);
+  /* ─── DISCLAIMER ─── */
+  .disclaimer {
+    padding: 24px 0 32px;
+    text-align: center;
+    font-size: 0.68rem;
+    color: rgba(156,163,175,0.6);
+    line-height: 1.6;
+    animation: fadeUp 0.6s 0.6s ease both;
   }
-  footer a { color: var(--text-dim); text-decoration: underline; }
+  .disclaimer a { color: rgba(156,163,175,0.6); text-decoration: underline; }
 
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-  .reveal {
-    opacity: 0; transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ─── RESPONSIVE: TABLET ─── */
-  @media (max-width: 1024px) {
-    .tip-cards { grid-template-columns: repeat(2, 1fr); }
-    .tip-cards .tip-card:last-child {
-      grid-column: 1 / -1;
-      max-width: 520px; justify-self: center; width: 100%;
-    }
-    .ai-card { grid-template-columns: 1fr; padding: 36px; }
-    .ai-chart { height: 240px; }
   }
 
   /* ─── RESPONSIVE: MOBILE ─── */
-  @media (max-width: 768px) {
-    .container { padding: 0 20px; }
-    .hero { padding: 48px 0 36px; }
-    .hero-badge { font-size: 0.74rem; padding: 7px 14px; gap: 6px; margin-bottom: 24px; }
-    .hero h1 { font-size: clamp(1.75rem, 7vw, 2.5rem); letter-spacing: -1px; margin-bottom: 18px; }
-    .hero-sub { font-size: 0.95rem; margin-bottom: 28px; }
+  @media (max-width: 640px) {
+    .page { padding: 0 18px; }
+    .hero { padding: 36px 0 0; }
+    .hero-badge { font-size: 0.7rem; padding: 5px 12px; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(1.65rem, 7vw, 2.4rem); margin-bottom: 12px; }
+    .hero-sub { font-size: 0.92rem; }
 
-    .cta-form { flex-direction: column; gap: 10px; }
-    .cta-form input {
-      border-right: 1px solid rgba(201,162,39,0.2);
-      border-radius: 8px; text-align: center;
-    }
-    .cta-form button { border-radius: 8px; padding: 16px; font-size: 1rem; }
+    .result-bar { gap: 20px; padding: 16px 0 24px; }
+    .result-item .num { font-size: 1.25rem; }
+    .result-item .label { font-size: 0.62rem; }
 
-    .ticker-wrap { margin-bottom: 36px; padding: 12px 0; }
-    .ticker { gap: 32px; }
-    .ticker-item { font-size: 0.78rem; gap: 8px; }
+    .form-card { padding: 24px 20px; }
+    .form-card h2 { font-size: 0.95rem; }
+    .form-fields input { padding: 15px 16px; font-size: 0.95rem; }
+    .form-fields button { padding: 16px; font-size: 1rem; }
+    .form-note { flex-direction: column; gap: 4px; font-size: 0.68rem; }
 
-    .tips-section { padding: 20px 0 60px; }
-    .tips-section h2 { margin-bottom: 28px; font-size: clamp(1.4rem, 5.5vw, 2rem); }
-    .tip-cards { grid-template-columns: 1fr; gap: 16px; }
-    .tip-cards .tip-card:last-child { max-width: none; }
-    .tip-card { padding: 24px 20px; }
-    .tip-number { font-size: 2.5rem; margin-bottom: 10px; }
-    .tip-icon { width: 42px; height: 42px; margin-bottom: 16px; }
+    .preview-strip { gap: 8px; }
+    .preview-chip { padding: 14px 10px; }
+    .preview-chip .num { font-size: 1.3rem; }
+    .preview-chip .title { font-size: 0.72rem; }
+    .preview-chip .lock { font-size: 0.62rem; }
 
-    .ai-visual { padding: 30px 0 60px; }
-    .ai-card { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
-    .ai-card-text h2 { font-size: 1.35rem; }
-    .ai-card-text p { font-size: 0.9rem; margin-bottom: 20px; }
-    .ai-chart { height: 180px; }
-    .ai-stats { gap: 10px; }
-    .ai-stat { padding: 12px 6px; }
-    .ai-stat .num { font-size: 1.25rem; }
-    .ai-stat .label { font-size: 0.62rem; }
-
-    .social-proof { padding: 0 0 60px; }
-    .proof-grid { grid-template-columns: 1fr; gap: 14px; }
-    .proof-card { padding: 22px; }
-    .proof-card blockquote { font-size: 0.85rem; }
-
-    .bottom-cta { padding: 50px 0; }
-    .bottom-cta h2 { font-size: clamp(1.4rem, 6vw, 2rem); }
-    .bottom-cta p { font-size: 0.92rem; }
-    .urgency { font-size: 0.8rem; flex-wrap: wrap; justify-content: center; }
-
-    footer { padding: 22px 0; }
-    footer p { font-size: 0.7rem; line-height: 1.6; }
+    .testimonial { padding: 18px; gap: 12px; }
+    .testimonial-avatar { width: 38px; height: 38px; font-size: 0.88rem; }
+    .testimonial-content blockquote { font-size: 0.82rem; }
   }
 
-  /* ─── RESPONSIVE: SMALL PHONE ─── */
-  @media (max-width: 400px) {
-    .container { padding: 0 16px; }
-    .topbar .container { gap: 8px; }
+  @media (max-width: 380px) {
+    .page { padding: 0 14px; }
     .topbar-logo { font-size: 1rem; }
-    .topbar-live { font-size: 0.68rem; gap: 5px; }
-    .hero { padding: 32px 0 28px; }
-    .hero-badge { font-size: 0.68rem; padding: 6px 12px; }
-    .hero h1 { font-size: 1.55rem; }
-    .hero-sub { font-size: 0.88rem; }
-    .cta-form input { padding: 14px 14px; font-size: 0.88rem; }
-    .cta-form button { padding: 14px; font-size: 0.88rem; }
-    .tip-card { padding: 22px 18px; }
-    .tip-card h3 { font-size: 1.05rem; }
-    .tip-card p { font-size: 0.84rem; }
-    .ai-card { padding: 20px; gap: 20px; }
-    .ai-card-text h2 { font-size: 1.2rem; }
-    .ai-stat .num { font-size: 1.1rem; }
+    .topbar-live { font-size: 0.68rem; }
+    .hero { padding: 28px 0 0; }
+    .hero h1 { font-size: 1.5rem; }
+    .hero-sub { font-size: 0.85rem; }
+    .result-bar { gap: 14px; }
+    .result-item .num { font-size: 1.1rem; }
+    .form-card { padding: 20px 16px; }
+    .preview-chip .title { font-size: 0.68rem; }
+    .preview-chip .num { font-size: 1.1rem; margin-bottom: 4px; }
   }
 </style>
 </head>
@@ -438,264 +336,130 @@
 
 <div class="bg-grid"></div>
 <div class="bg-glow bg-glow--1"></div>
-<div class="bg-glow bg-glow--2"></div>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-logo">AI Beurs<span style="color:var(--text)">Insider</span></div>
+<div class="page">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-logo">AI Beurs<span>Insider</span></div>
     <div class="topbar-live">
       <span class="dot"></span>
-      AI-analyse actief — live data
+      AI-analyse live
     </div>
   </div>
-</div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      Exclusief AI-rapport — Beperkt beschikbaar
-    </div>
-
-    <h1>3 Geheime Kooptips die onze AI ontdekte <em>vóór de rest</em></h1>
-
-    <p class="hero-sub">Ons AI-model analyseert duizenden datapunten en spoort opkomende trends op die de meeste beleggers volledig over het hoofd zien. Ontvang direct toegang tot de 3 meest veelbelovende kansen.</p>
-
-    <div id="hero-form">
-      <div class="cta-form">
-        <input type="email" id="email-top" placeholder="Vul je e-mailadres in..." required>
-        <button onclick="handleSubmit('email-top', 'hero-form')">Stuur mij de tips →</button>
-      </div>
-      <p class="cta-note">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        100% gratis · geen spam · direct in je inbox
-      </p>
-    </div>
-    <div class="success-msg" id="hero-success">
-      <h3>✓ Je rapport is onderweg!</h3>
-      <p>Check je inbox (en spamfolder) binnen enkele minuten.</p>
-    </div>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker" id="ticker"></div>
-</div>
-
-<!-- 3 TIPS PREVIEW -->
-<section class="tips-section">
-  <div class="container">
-    <div class="section-label reveal">Wat je ontvangt</div>
-    <h2 class="reveal">3 Kooptips gebaseerd op <span class="gold">AI-trendanalyse</span></h2>
-
-    <div class="tip-cards">
-      <div class="tip-card reveal">
-        <div class="tip-number">01</div>
-        <div class="tip-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        </div>
-        <h3>De Verborgen Megatrend</h3>
-        <p>Een sector die explosief groeit, maar nog volledig onder de radar vliegt. Onze AI detecteerde een 340% toename in sectoractiviteit voordat het mainstream werd.</p>
-        <span class="tip-locked" onclick="scrollToForm()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          Ontgrendel deze tip
-        </span>
-      </div>
-
-      <div class="tip-card reveal">
-        <div class="tip-number">02</div>
-        <div class="tip-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Het Ondergewaardeerde Aandeel</h3>
-        <p>Dit bedrijf noteert ver onder zijn intrinsieke waarde terwijl het profiteert van dezelfde trend. AI-score: 94/100 voor kooppotentieel.</p>
-        <span class="tip-locked" onclick="scrollToForm()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          Ontgrendel deze tip
-        </span>
-      </div>
-
-      <div class="tip-card reveal">
-        <div class="tip-number">03</div>
-        <div class="tip-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3>De Disruptor van 2026</h3>
-        <p>Een small-cap die de markt compleet kan verrassen. Minder dan 2% van de institutionele beleggers heeft dit aandeel op de radar.</p>
-        <span class="tip-locked" onclick="scrollToForm()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-          Ontgrendel deze tip
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AI VISUAL -->
-<section class="ai-visual">
-  <div class="container">
-    <div class="ai-card reveal">
-      <div class="ai-card-text">
-        <div class="section-label">Hoe het werkt</div>
-        <h2>Ons AI-model scant <span class="gold">1.200+ datapunten</span> per seconde</h2>
-        <p>Van patentaanvragen en supply-chain data tot social sentiment en insiderhandel — onze algoritmes detecteren trends maanden vóór ze in het nieuws komen.</p>
-        <div class="ai-stats">
-          <div class="ai-stat">
-            <div class="num">97%</div>
-            <div class="label">Nauwkeurigheid</div>
-          </div>
-          <div class="ai-stat">
-            <div class="num">3m</div>
-            <div class="label">Voorsprong</div>
-          </div>
-          <div class="ai-stat">
-            <div class="num">2.4M</div>
-            <div class="label">Datapunten/dag</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ai-chart">
-        <svg viewBox="0 0 500 280" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="var(--gold)" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="var(--gold)" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path d="M0 250 Q60 240 100 220 T180 200 T260 150 T330 170 T380 100 T440 60 T500 30 L500 280 L0 280 Z" fill="url(#glow)"/>
-          <path d="M0 250 Q60 240 100 220 T180 200 T260 150 T330 170 T380 100 T440 60 T500 30" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round">
-            <animate attributeName="stroke-dasharray" from="0 2000" to="2000 0" dur="2.5s" fill="freeze"/>
-          </path>
-          <circle cx="260" cy="150" r="5" fill="var(--gold)" opacity="0">
-            <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze"/>
-          </circle>
-          <circle cx="380" cy="100" r="5" fill="var(--gold)" opacity="0">
-            <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.4s" fill="freeze"/>
-          </circle>
-          <circle cx="500" cy="30" r="5" fill="var(--gold)" opacity="0">
-            <animate attributeName="opacity" from="0" to="1" begin="2.2s" dur="0.4s" fill="freeze"/>
-          </circle>
-          <text x="255" y="140" fill="var(--gold)" font-size="10" font-family="JetBrains Mono" opacity="0">
-            AI-detectie
-            <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.4s" fill="freeze"/>
-          </text>
-          <text x="430" y="22" fill="var(--green)" font-size="11" font-family="JetBrains Mono" font-weight="bold" opacity="0">
-            +67%
-            <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="0.4s" fill="freeze"/>
-          </text>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="social-proof">
-  <div class="container">
-    <div class="section-label reveal">Wat lezers zeggen</div>
-    <div class="proof-grid">
-      <div class="proof-card reveal">
-        <div class="proof-stars">★★★★★</div>
-        <blockquote>"De vorige AI-tip steeg 42% in drie maanden. Ik had nooit zelf naar die sector gekeken."</blockquote>
-        <div class="proof-author">Mark V.</div>
-        <div class="proof-role">Particuliere belegger, 8 jaar ervaring</div>
-      </div>
-      <div class="proof-card reveal">
-        <div class="proof-stars">★★★★★</div>
-        <blockquote>"Eindelijk een data-gedreven aanpak in plaats van onderbuikgevoel. Dit is de toekomst van beleggen."</blockquote>
-        <div class="proof-author">Sandra K.</div>
-        <div class="proof-role">Vermogensbeheerder</div>
-      </div>
-      <div class="proof-card reveal">
-        <div class="proof-stars">★★★★★</div>
-        <blockquote>"Twee van de drie tips uit het vorige rapport zaten raak. Dat is beter dan mijn broker."</blockquote>
-        <div class="proof-author">Joost D.</div>
-        <div class="proof-role">Daytrader</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOTTOM CTA -->
-<section class="bottom-cta" id="bottom-cta">
-  <div class="container">
-    <div class="urgency reveal">
       <span class="urgency-dot"></span>
-      Nog <span class="countdown" id="countdown">--:--:--</span> beschikbaar
+      Nog maar kort beschikbaar
     </div>
 
-    <h2 class="reveal">Klaar om eerder te zijn dan de markt?</h2>
-    <p class="reveal">Ontvang nu de 3 AI-kooptips die 97% van de beleggers nog niet kent. Gratis en direct in je inbox.</p>
+    <h1>3 AI-Kooptips met <span class="gold">gem. 47% rendement</span></h1>
 
-    <div id="bottom-form" class="reveal">
-      <div class="cta-form">
-        <input type="email" id="email-bottom" placeholder="je@email.com" required>
-        <button onclick="handleSubmit('email-bottom', 'bottom-form')">Ontvang het rapport →</button>
+    <p class="hero-sub">Onze AI spoort beurskansen op die de meeste beleggers volledig over het hoofd zien — gemiddeld 3 maanden vóór de markt reageert.</p>
+
+    <div class="result-bar">
+      <div class="result-item">
+        <div class="num">47%</div>
+        <div class="label">Gem. rendement</div>
       </div>
-      <p class="cta-note">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        Je gegevens zijn veilig · je kunt je altijd uitschrijven
-      </p>
+      <div class="result-item">
+        <div class="num">3m</div>
+        <div class="label">Voorsprong</div>
+      </div>
+      <div class="result-item">
+        <div class="num">2/3</div>
+        <div class="label">Hit-ratio vorig rapport</div>
+      </div>
     </div>
-    <div class="success-msg" id="bottom-success">
-      <h3>✓ Je rapport is onderweg!</h3>
-      <p>Check je inbox (en spamfolder) binnen enkele minuten.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <p style="margin-bottom:6px;">© 2026 AI BeursInsider — Alle rechten voorbehouden</p>
-    <p><a href="#">Privacybeleid</a> · <a href="#">Disclaimer</a> · Beleggen brengt risico's met zich mee. In het verleden behaalde resultaten bieden geen garantie voor de toekomst.</p>
+  <!-- FORM -->
+  <div id="form-wrapper">
+    <div class="form-card">
+      <h2>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Ontvang het gratis rapport direct in je inbox
+      </h2>
+      <div class="form-fields">
+        <input type="email" id="email" placeholder="Vul je e-mailadres in..." required>
+        <button onclick="handleSubmit()">Stuur mij de 3 kooptips →</button>
+      </div>
+      <div class="form-note">
+        <span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          100% gratis
+        </span>
+        <span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Geen spam
+        </span>
+        <span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Direct toegang
+        </span>
+      </div>
+    </div>
   </div>
-</footer>
+
+  <div class="success-msg" id="success">
+    <h3>✓ Je rapport is onderweg!</h3>
+    <p>Check je inbox (en spamfolder) binnen enkele minuten.</p>
+  </div>
+
+  <!-- 3 TIPS PREVIEW -->
+  <div class="preview-strip">
+    <div class="preview-chip">
+      <div class="num">01</div>
+      <div class="title">De Verborgen Megatrend</div>
+      <div class="lock">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Vergrendeld
+      </div>
+    </div>
+    <div class="preview-chip">
+      <div class="num">02</div>
+      <div class="title">Het Ondergew. Aandeel</div>
+      <div class="lock">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Vergrendeld
+      </div>
+    </div>
+    <div class="preview-chip">
+      <div class="num">03</div>
+      <div class="title">De Disruptor van 2026</div>
+      <div class="lock">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Vergrendeld
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div class="social-strip">
+    <div class="testimonial">
+      <div class="testimonial-avatar">MV</div>
+      <div class="testimonial-content">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"De vorige AI-tip steeg 42% in drie maanden. Ik had nooit zelf naar die sector gekeken."</blockquote>
+        <div class="testimonial-author">Mark Verhoeven</div>
+        <div class="testimonial-role">Particuliere belegger · 8 jaar ervaring · Amsterdam</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>© 2026 AI BeursInsider · <a href="#">Privacybeleid</a> · <a href="#">Disclaimer</a></p>
+    <p style="margin-top:6px;">Beleggen brengt risico's met zich mee. Je kunt je inleg (gedeeltelijk) verliezen. In het verleden behaalde resultaten bieden geen garantie voor de toekomst. Dit rapport bevat geen persoonlijk beleggingsadvies. Raadpleeg een erkend financieel adviseur voordat je beleggingsbeslissingen neemt.</p>
+  </div>
+
+</div>
 
 <script>
-  // ─── TICKER (koersen ~11 feb 2026) ───
-  const tickerData = [
-    { name: 'S&P 500',   val: '6.972,38',    dir: 'up',   pct: '+0.11%' },
-    { name: 'NASDAQ',    val: '23.248,12',    dir: 'up',   pct: '+0.04%' },
-    { name: 'Dow Jones', val: '50.369,89',    dir: 'up',   pct: '+0.47%' },
-    { name: 'DAX',       val: '24.987,85',    dir: 'down', pct: '-0.11%' },
-    { name: 'NVIDIA',    val: '$188,54',      dir: 'up',   pct: '+2.50%' },
-    { name: 'ASML',      val: '€1.203,60',    dir: 'down', pct: '-0.10%' },
-    { name: 'TSMC',      val: '$327,50',      dir: 'up',   pct: '+0.84%' },
-    { name: 'BTC/USD',   val: '$68.960',      dir: 'down', pct: '-1.52%' },
-    { name: 'GOLD',      val: '$5.061',       dir: 'up',   pct: '+0.74%' },
-    { name: 'EUR/USD',   val: '1.0362',       dir: 'down', pct: '-0.08%' },
-  ];
-  const ticker = document.getElementById('ticker');
-  const items = tickerData.map(t =>
-    `<div class="ticker-item"><span class="name">${t.name}</span><span class="val ${t.dir}">${t.val}</span><span class="${t.dir}">${t.pct}</span></div>`
-  ).join('');
-  ticker.innerHTML = items + items;
-
-  // ─── COUNTDOWN ───
-  function startCountdown() {
-    const end = new Date();
-    end.setHours(end.getHours() + 23, 59, 59);
-    function update() {
-      const now = new Date();
-      let diff = Math.max(0, end - now);
-      const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
-      const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-      const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-      document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
-    }
-    update();
-    setInterval(update, 1000);
-  }
-  startCountdown();
-
-  // ─── FORM SUBMIT ───
-  function handleSubmit(inputId, formId) {
-    const input = document.getElementById(inputId);
+  function handleSubmit() {
+    const input = document.getElementById('email');
     const email = input.value.trim();
     if (!email || !email.includes('@') || !email.includes('.')) {
       input.style.borderColor = 'var(--red)';
@@ -703,28 +467,16 @@
       setTimeout(() => input.style.borderColor = '', 2000);
       return;
     }
-    document.getElementById(formId).style.display = 'none';
-    const successId = formId === 'hero-form' ? 'hero-success' : 'bottom-success';
-    document.getElementById(successId).style.display = 'block';
-    // Koppel hier je eigen backend: Mailchimp, ConvertKit, ActiveCampaign, etc.
+    document.getElementById('form-wrapper').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+    // Koppel hier je backend: Mailchimp / ConvertKit / ActiveCampaign / Zapier webhook
     console.log('Lead captured:', email);
   }
 
-  function scrollToForm() {
-    document.getElementById('bottom-cta').scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => document.getElementById('email-bottom').focus(), 600);
-  }
-
-  // ─── SCROLL REVEAL ───
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  // Allow Enter key to submit
+  document.getElementById('email').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); handleSubmit(); }
+  });
 </script>
 
 </body>
